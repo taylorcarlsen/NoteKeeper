@@ -1,5 +1,9 @@
 package com.example.notekeeper
 
-class CourseInfo(val courseId : String,val title: String)
+data class CourseInfo(val courseId : String,val title: String) {
+    override fun toString(): String {
+        return title
+    }
+}
 
-class NoteInfo(var course: CourseInfo, val title: String, val text: String)
+data class NoteInfo(var course: CourseInfo, val title: String, val text: String)
